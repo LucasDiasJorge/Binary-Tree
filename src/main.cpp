@@ -13,5 +13,15 @@ int main() {
 
     std::cout << "Inorder traversal: ";
     tree.inorder();
+
+    auto bfsVals = tree.bfs();
+    std::cout << "BFS (level-order): ";
+    for (int v : bfsVals) std::cout << v << ' ';
+    std::cout << '\n';
+
+    auto dfsVals = tree.dfs();
+    std::cout << "DFS (pre-order): ";
+    for (int v : dfsVals) std::cout << v << ' ';
+    std::cout << '\n';
     return 0;
 }
